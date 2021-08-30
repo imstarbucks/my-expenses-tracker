@@ -1,0 +1,10 @@
+body {
+	@extend .bg-raisin-black;
+	color: $isabelline;
+	justify-content: center;
+	text-align: center;
+}
+
+p {
+	margin-bottom: 0;
+}

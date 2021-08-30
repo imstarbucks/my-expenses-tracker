@@ -1,0 +1,12 @@
+.add-transaction-header::after {
+	content: "";
+	position: absolute;
+	display: block;
+	background-color: gray;
+	border-radius: 1rem;
+	width: 60%;
+	height: 2px;
+	left: 50%;
+	transform: translateX(-50%);
+	margin-top: 2px;
+}

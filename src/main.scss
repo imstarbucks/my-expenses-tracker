@@ -1,0 +1,20 @@
+@import '~bootstrap/scss/bootstrap';
+
+/* Colors */
+@import './sass/colors';
+
+/* Base */
+@import './sass/base';
+
+/* Components */
+@import './sass/components/header';
+@import './sass/components/balance';
+@import './sass/components/incomeExpenses';
+@import './sass/components/transactionList';
+@import './sass/components/addTransaction';
+
+/* Utilities */
+@import './sass/utilities';
+
+/* Button */
+@import './sass/buttons';

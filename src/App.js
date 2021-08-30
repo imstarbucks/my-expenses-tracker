@@ -1,24 +1,80 @@
-import logo from './logo.svg';
-import './App.css';
+/* Bootstrap */
+import Container from 'react-bootstrap/Container'
+import Row from 'react-bootstrap/Row'
+import Col from 'react-bootstrap/Col'
+
+/* Style */
+import './main.scss';
+
+/* Component */
+import { Header } from './components/Header'
+import { Balance } from './components/Balance'
+import { IncomeExpenses } from './components/IncomeExpenses'
+import { TransactionList } from './components/TransactionList'
+import { AddTransaction } from './components/AddTransaction'
+
+/* Context */
+import { GlobalProvider } from './context/GlobalState'
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+	  <GlobalProvider>
+
+		<Container>
+			<Row className="justify-content-center
+								px-2">
+				<Col
+				md={8}
+				lg={10}>
+					<div>
+						<Header/>
+					</div>
+				</Col>
+			</Row>
+			<Row className="justify-content-center">
+				<Col
+				xs={10}
+				md={8}
+				lg={5}
+				xl={4}
+				>
+					<Balance />
+				</Col>
+			</Row>
+			<Row className="justify-content-center">
+				<Col
+				xs={10}
+				md={8}
+				lg={5}
+				xl={4}>
+					<IncomeExpenses />
+				</Col>
+			</Row>
+			<Container>
+				<Row className="justify-content-center">
+					<Col
+					xs={10}
+					md={8}
+					lg={5}
+					xl={4}>
+						<TransactionList />
+					</Col>
+				</Row>
+			</Container>
+			<Container>
+				<Row className="justify-content-center">
+					<Col
+					xs={10}
+					md={8}
+					lg={5}
+					xl={4}>
+						<AddTransaction />
+					</Col>
+				</Row>
+			</Container>
+		</Container>
+	  </GlobalProvider>
   );
 }
 

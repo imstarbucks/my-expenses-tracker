@@ -1,0 +1,16 @@
+.btn-close-sm {
+	width: 5px;
+	height: 5px;
+	margin: auto 2px;
+}
+
+.btn-add {
+	background-color: $grullo;
+	color: $bone;
+	border: none;
+
+	&:hover {
+		background-color: $grullo-darken;
+		color: $isabelline;
+	}
+}

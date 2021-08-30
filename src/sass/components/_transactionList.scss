@@ -1,0 +1,43 @@
+.transaction-header::after {
+	content: "";
+	position: absolute;
+	display: block;
+	background-color: gray;
+	border-radius: 1rem;
+	width: 60%;
+	height: 2px;
+	left: 50%;
+	transform: translateX(-50%);
+	margin-top: 2px;
+}
+
+ul.transaction-list {
+	padding-left: 0;
+	margin-bottom: 0;
+
+	li.transaction-item {
+		list-style-type: none;
+		border-radius: .5em;
+		background-color: $classic-chalk;
+		// box-shadow: 4px 5px #888888;
+		width: 60%;
+		text-align: left;
+		// margin: .5em;
+		margin: 1em auto;
+		padding: 10px;
+		display: flex;
+		justify-content: space-between;
+		@extend .font-md;
+
+		span.transaction-name {
+			@extend .color-slate-gray;
+		}
+
+		&--minus {
+			color: $red;
+		}
+		&--plus {
+			color: $green;
+		}
+	}
+}
